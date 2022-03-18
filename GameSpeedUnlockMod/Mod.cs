@@ -8,5 +8,13 @@ namespace GameSpeedUnlockMod;
 public class Mod
 {
     public Mod(DWGame game)
-        => new Harmony(nameof(GameSpeedUnlockMod)).PatchAll();
+    {
+        Console.WriteLine("GameSpeedUnlockMod Patching");
+        var harmony = new Harmony(nameof(GameSpeedUnlockMod));
+        harmony.PatchAll();
+
+        foreach (var m in harmony.GetPatchedMethods())
+            Console.WriteLine($"GameSpeedUnlockMod Patched {m.Name}");
+        Console.WriteLine("GameSpeedUnlockMod Done Patching");
+    }
 }

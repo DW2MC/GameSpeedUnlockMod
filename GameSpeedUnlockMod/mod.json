@@ -3,6 +3,7 @@
   "displayName": "Game Speed Unlock Mod",
   "mainModule": "GameSpeedUnlockMod.dll",
   "mainClass": "GameSpeedUnlockMod.Mod",
-  "version": "1.0.0",
+  "version": "1.0.1",
+  "generateManifest": "XxHash64",
   "dependencies": []
 }
